@@ -3,7 +3,14 @@ import React, { useState } from 'react';
 
 export const RadioButton = () => {
 
-  const [searchType, setSearchType] = useState('organizations'); 
+
+  const SEARCH_TYPES = {
+    ORGANIZATIONS: 'organizations',
+    USERS: 'users',
+  };
+
+
+  const [searchType, setSearchType] = useState(SEARCH_TYPES.ORGANIZATIONS); 
 
   const handleSearchType= (e) => {
     setSearchType(e.target.value);
@@ -14,8 +21,8 @@ export const RadioButton = () => {
       <input
         type="radio"
         name="searchType"
-        value="organizations"
-        checked={searchType === 'organizations'}
+        value={SEARCH_TYPES.ORGANIZATIONS}
+        checked={searchType === SEARCH_TYPES.ORGANIZATIONS}
         onChange={handleSearchType}
       />
       <p className="ml-2"> Organizations</p>
@@ -23,8 +30,8 @@ export const RadioButton = () => {
       <input
         type="radio"
         name="searchType"
-        value="users"
-      
+        value={SEARCH_TYPES.USERS}
+        checked={searchType === SEARCH_TYPES.USERS}
         onChange={handleSearchType}
         className="ml-4"
       />

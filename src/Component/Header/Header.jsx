@@ -7,7 +7,6 @@ export const Header = () => {
         <nav className="mt-4 w-3/4 mx-auto">
           <div className='flex justify-between items-center'>
             <img src={github} alt='github-icon' className='w-24 h-16' />
-            <p className="hover:text-gray-300 text-sm">Log in/Register</p>
           </div>
         </nav>
         <hr className='border w-3/4 border-gray-300 mx-auto'></hr>
